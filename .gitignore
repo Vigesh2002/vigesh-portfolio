@@ -1,0 +1,37 @@
+node_modules
+.next
+out
+build
+dist
+coverage
+
+.env.local
+.env.development
+.env.production
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# TypeScript incremental cache
+*.tsbuildinfo
+
+# Playwright
+test-results
+playwright-report
+blob-report
+playwright/.cache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Windows reserved device name — 0-byte artifact from a `> nul` redirect in MSYS
+# bash (which creates a literal file). Git refuses to track it; nothing reads it.
+nul
+
+# Tool scratch/cache
+.firecrawl/
+

@@ -1,0 +1,261 @@
+/**
+ * ==============================================================================
+ * CENTRALIZED COLOR SYSTEM
+ * ==============================================================================
+ * This is the SINGLE SOURCE OF TRUTH for all colors used across the entire application.
+ *
+ * Editing any color value or adding a theme preset here immediately updates:
+ *   - All CSS variables (--background, --foreground, --accent, --card, etc.)
+ *   - All Tailwind CSS utility classes (bg-accent, text-accent, ring-ring, etc.)
+ *   - Both Light and Dark theme appearances across all pages and components
+ *   - Dynamic multi-theme color switching (data-color-theme attribute on <html>)
+ * ==============================================================================
+ */
+
+/* ==============================================================================
+ * BASE DEFAULTS (THEME 1: INDIGO - Linear / Stripe Inspired)
+ * ============================================================================== */
+:root {
+  /* Canvas & Surfaces */
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+
+  /* Brand / Accent Colors */
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  --accent-hover: #4338ca;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+
+  /* Muted & Secondary Elements */
+  --muted: #f4f4f5;
+  --muted-foreground: #52525b;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+
+  /* Borders & Focus Rings */
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #4f46e5;
+
+  /* Semantic Feedback Colors */
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+  --warning: #f59e0b;
+  --warning-foreground: #ffffff;
+  --info: #0284c7;
+  --info-foreground: #ffffff;
+}
+
+.dark {
+  /* Canvas & Surfaces */
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card: #101012;
+  --card-foreground: #ededed;
+  --popover: #101012;
+  --popover-foreground: #ededed;
+
+  /* Brand / Accent Colors */
+  --accent: #818cf8;
+  --accent-foreground: #0a0a0a;
+  --accent-hover: #a5b4fc;
+  --primary: #818cf8;
+  --primary-foreground: #0a0a0a;
+
+  /* Muted & Secondary Elements */
+  --muted: #18181b;
+  --muted-foreground: #a1a1aa;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+
+  /* Borders & Focus Rings */
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #818cf8;
+
+  /* Semantic Feedback Colors */
+  --destructive: #f87171;
+  --destructive-foreground: #0a0a0a;
+  --success: #22c55e;
+  --success-foreground: #0a0a0a;
+  --warning: #fbbf24;
+  --warning-foreground: #0a0a0a;
+  --info: #38bdf8;
+  --info-foreground: #0a0a0a;
+}
+
+/* ==============================================================================
+ * DYNAMIC COLOR SYSTEMS (POPULAR & MODERN WEBSITE PRESETS)
+ * ============================================================================== */
+
+/* 1. INDIGO (Linear / Stripe) */
+[data-color-theme='indigo'] {
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  --accent-hover: #4338ca;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --ring: #4f46e5;
+}
+.dark[data-color-theme='indigo'],
+[data-color-theme='indigo'].dark,
+[data-color-theme='indigo'] .dark {
+  --accent: #818cf8;
+  --accent-foreground: #0a0a0a;
+  --accent-hover: #a5b4fc;
+  --primary: #818cf8;
+  --primary-foreground: #0a0a0a;
+  --ring: #818cf8;
+}
+
+/* 2. EMERALD (Supabase / Mintlify) */
+[data-color-theme='emerald'] {
+  --accent: #059669;
+  --accent-foreground: #ffffff;
+  --accent-hover: #047857;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --ring: #059669;
+}
+.dark[data-color-theme='emerald'],
+[data-color-theme='emerald'].dark,
+[data-color-theme='emerald'] .dark {
+  --accent: #34d399;
+  --accent-foreground: #022c22;
+  --accent-hover: #6ee7b7;
+  --primary: #34d399;
+  --primary-foreground: #022c22;
+  --ring: #34d399;
+}
+
+/* 3. VIOLET (Raycast / Solana) */
+[data-color-theme='violet'] {
+  --accent: #7c3aed;
+  --accent-foreground: #ffffff;
+  --accent-hover: #6d28d9;
+  --primary: #7c3aed;
+  --primary-foreground: #ffffff;
+  --ring: #7c3aed;
+}
+.dark[data-color-theme='violet'],
+[data-color-theme='violet'].dark,
+[data-color-theme='violet'] .dark {
+  --accent: #a78bfa;
+  --accent-foreground: #2e1065;
+  --accent-hover: #c4b5fd;
+  --primary: #a78bfa;
+  --primary-foreground: #2e1065;
+  --ring: #a78bfa;
+}
+
+/* 4. AMBER (Cloudflare / Claude) */
+[data-color-theme='amber'] {
+  --accent: #ea580c;
+  --accent-foreground: #ffffff;
+  --accent-hover: #c2410c;
+  --primary: #ea580c;
+  --primary-foreground: #ffffff;
+  --ring: #ea580c;
+}
+.dark[data-color-theme='amber'],
+[data-color-theme='amber'].dark,
+[data-color-theme='amber'] .dark {
+  --accent: #fb923c;
+  --accent-foreground: #431407;
+  --accent-hover: #fdba74;
+  --primary: #fb923c;
+  --primary-foreground: #431407;
+  --ring: #fb923c;
+}
+
+/* 5. CYAN (Vercel / Tailwind UI) */
+[data-color-theme='cyan'] {
+  --accent: #0284c7;
+  --accent-foreground: #ffffff;
+  --accent-hover: #0369a1;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --ring: #0284c7;
+}
+.dark[data-color-theme='cyan'],
+[data-color-theme='cyan'].dark,
+[data-color-theme='cyan'] .dark {
+  --accent: #38bdf8;
+  --accent-foreground: #082f49;
+  --accent-hover: #7dd3fc;
+  --primary: #38bdf8;
+  --primary-foreground: #082f49;
+  --ring: #38bdf8;
+}
+
+/* 6. FOREST (Deep green — editorial / gallery inspired) */
+[data-color-theme='forest'] {
+  --accent: #0b5d3f;
+  --accent-foreground: #ffffff;
+  --accent-hover: #084a32;
+  --primary: #0b5d3f;
+  --primary-foreground: #ffffff;
+  --ring: #0b5d3f;
+}
+.dark[data-color-theme='forest'],
+[data-color-theme='forest'].dark,
+[data-color-theme='forest'] .dark {
+  --accent: #34d399;
+  --accent-foreground: #022c22;
+  --accent-hover: #6ee7b7;
+  --primary: #34d399;
+  --primary-foreground: #022c22;
+  --ring: #34d399;
+}
+
+/* ==============================================================================
+ * TAILWIND CSS V4 THEME MAPPINGS
+ * ============================================================================== */
+@theme inline {
+  /* Background & Surface Classes */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Brand & Accent Classes */
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-hover: var(--accent-hover);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  /* Muted & Secondary Classes */
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* Borders & Focus Ring Classes */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Semantic Feedback Classes */
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}

@@ -1,0 +1,53 @@
+import type { Experience } from '@/types';
+
+export const experience: Experience[] = [
+  {
+    company: 'Apprikart Digital Solutions Pvt. Ltd',
+    role: 'Software Developer, Frontend',
+    location: 'Bengaluru, India',
+    start: '2025-04',
+    end: 'Present',
+    highlights: [
+      'Work on the React 19 frontend of HustleBot, a multi-tenant platform for WhatsApp and email marketing. The app is split by feature and has 50+ routes, backed by a shared library of 100+ components that support themes and per-brand customisation.',
+      'Built the visual flow builder with React Flow and Dagre. It has message, condition, switch, delay, webhook and exit nodes, auto-layout, and checks that catch loops and orphaned nodes before a flow can go live.',
+      "Built the team inbox on Socket.IO: live messages, agent assignment and transfers, internal notes, snoozing and status tracking. It follows WhatsApp's 24-hour window, so once a chat expires agents are asked to pick an approved template instead.",
+      'Built the WhatsApp tools: a template creator with a live phone preview (media headers, buttons, carousels), Meta account onboarding, and broadcast scheduling to CRM segments.',
+      'Built the CRM side: a rule-based segment builder with nested AND/OR groups, custom attributes, and CSV import with column mapping, duplicate detection and phone number formatting.',
+      "Built a retargeting feature that lets marketers pick past campaigns and reach contacts who read but didn't click, or whose messages bounced. The audience size updates as they choose, and the wallet cost is checked before sending.",
+      'Built the email tools: Unlayer editor integration, template versioning, HTML import with inlined CSS, and screens for verifying SPF, DKIM and DMARC records.',
+      'Set up authentication with JWT access and refresh tokens (Axios interceptors), Google OAuth and OTP, along with role-based permissions for each workspace.',
+      'Built the prepaid wallet screens (per-message debits, INR and USD, PDF invoices) and the analytics dashboards using Chart.js and Recharts.',
+      'Wrote the Playwright end-to-end suite covering login, navigation and the main business flows.',
+    ],
+    stack: [
+      'React 19',
+      'TypeScript',
+      'Next.js',
+      'React Flow',
+      'Dagre',
+      'Socket.IO',
+      'Zustand',
+      'TanStack Query',
+      'Tailwind CSS',
+      'Unlayer',
+      'Chart.js',
+      'Recharts',
+      'JWT',
+      'Playwright',
+    ],
+  },
+  {
+    company: 'Gamersback Pvt. Ltd',
+    role: 'Frontend Developer, React',
+    location: 'Bengaluru, India',
+    start: '2023-11',
+    end: '2024-05',
+    highlights: [
+      'Built responsive React interfaces for a live gaming platform used in production.',
+      'Integrated backend REST APIs and turned client workflows into working screens.',
+      'Improved rendering performance, fixed cross-browser bugs, and built reusable UI components.',
+      'Worked with the design and backend teams to ship features to production.',
+    ],
+    stack: ['React', 'JavaScript', 'REST APIs', 'CSS3', 'Git'],
+  },
+];
